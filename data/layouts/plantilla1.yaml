@@ -1,0 +1,37 @@
+name: plantilla1
+slots:
+  - id: '0'
+    left: 0
+    top: 0
+    height: 300
+    width: 400
+  - id: '1'
+    left: 430
+    top: 0
+    height: 300
+    width: 200
+  - id: '2'
+    left: 661
+    top: 0
+    height: 300
+    width: 200
+  - id: '3'
+    left: 0
+    top: 418
+    height: 300
+    width: 400
+  - id: '4'
+    left: 444
+    top: 416
+    height: 300
+    width: 400
+  - id: '5'
+    left: 898
+    top: 418
+    height: 300
+    width: 400
+  - id: '6'
+    left: 898
+    top: 0
+    height: 300
+    width: 400

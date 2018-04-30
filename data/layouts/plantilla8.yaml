@@ -1,0 +1,92 @@
+name: plantilla8
+slots:
+  - id: '0'
+    left: 2
+    top: 0
+    height: 300
+    width: 200
+  - id: '1'
+    left: 216
+    top: 0
+    height: 300
+    width: 200
+  - id: '2'
+    left: 435
+    top: 0
+    height: 300
+    width: 200
+  - id: '3'
+    left: 657
+    top: 0
+    height: 300
+    width: 200
+  - id: '4'
+    left: 873
+    top: 0
+    height: 300
+    width: 200
+  - id: '5'
+    left: 1098
+    top: 0
+    height: 300
+    width: 200
+  - id: '0'
+    left: 2
+    top: 0
+    height: 300
+    width: 200
+  - id: '1'
+    left: 216
+    top: 0
+    height: 300
+    width: 200
+  - id: '2'
+    left: 435
+    top: 0
+    height: 300
+    width: 200
+  - id: '3'
+    left: 657
+    top: 0
+    height: 300
+    width: 200
+  - id: '4'
+    left: 873
+    top: 0
+    height: 300
+    width: 200
+  - id: '5'
+    left: 1098
+    top: 0
+    height: 300
+    width: 200
+  - id: '6'
+    left: 0
+    top: 352
+    height: 300
+    width: 200
+  - id: '7'
+    left: 219
+    top: 353
+    height: 300
+    width: 200
+  - id: '8'
+    left: 439
+    top: 352
+    height: 300
+    width: 200
+  - id: '9'
+    left: 657
+    top: 354
+    height: 300
+    width: 200
+  - id: '10'
+    left: 872
+    top: 352
+    height: 300
+    width: 200
+  - id: '11'
+    left: 1098
+    top: 356
+    height: 300
+    width: 200

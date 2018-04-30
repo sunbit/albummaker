@@ -1,0 +1,52 @@
+name: plantilla13
+slots:
+  - id: '0'
+    left: 0
+    top: 210
+    height: 200
+    width: 600
+  - id: '1'
+    left: 696
+    top: 211
+    height: 200
+    width: 600
+  - id: '2'
+    left: 0
+    top: 418
+    height: 300
+    width: 400
+  - id: '3'
+    left: 898
+    top: 418
+    height: 300
+    width: 400
+  - id: '4'
+    left: 437
+    top: 418
+    height: 300
+    width: 400
+  - id: '5'
+    left: 0
+    top: 0
+    height: 200
+    width: 300
+  - id: '7'
+    left: 474
+    top: 0
+    height: 200
+    width: 300
+  - id: '8'
+    left: 998
+    top: 0
+    height: 200
+    width: 300
+  - id: '9'
+    left: 309
+    top: 0
+    height: 200
+    width: 152
+  - id: '10'
+    left: 791
+    top: 0
+    height: 200
+    width: 152

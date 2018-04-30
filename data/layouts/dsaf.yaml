@@ -1,0 +1,12 @@
+name: dsaf
+slots:
+  - id: '1'
+    left: 0
+    top: 0
+    height: 300
+    width: 400
+  - id: '2'
+    left: 0
+    top: 320
+    height: 300
+    width: 400

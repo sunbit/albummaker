@@ -1,0 +1,22 @@
+name: prova
+slots:
+  - id: NaN
+    left: 0
+    top: 0
+    height: 200
+    width: 300
+  - id: NaN
+    left: 326
+    top: 0
+    height: 200
+    width: 152
+  - id: NaN
+    left: 998
+    top: 0
+    height: 200
+    width: 300
+  - id: NaN
+    left: 830
+    top: 0
+    height: 200
+    width: 152

@@ -1,0 +1,22 @@
+name: sdf
+slots:
+  - id: '0'
+    left: 0
+    top: 0
+    height: 200
+    width: 300
+  - id: '1'
+    left: 326
+    top: 0
+    height: 200
+    width: 388
+  - id: '2'
+    left: 0
+    top: 224
+    height: 200
+    width: 300
+  - id: '3'
+    left: 830
+    top: 0
+    height: 200
+    width: 152

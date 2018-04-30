@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Album maker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-lime.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://use.fontawesome.com/80773a3c4a.js"></script>
+</head>
+
+<body class="darker">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--9-col" style="position:relative;">
+            <div class="mdl-card  mdl-shadow--2dp dark" id="main-card">
+                <div class="mdl-tabs mdl-js-tabs">
+                    <div class="mdl-tabs__tab-bar">
+                        <a href="#composer" class="mdl-tabs__tab is-active">Composer</a>
+                        <a href="#navigator" class="mdl-tabs__tab">Navigator</a>
+                        <a href="#archive" class="mdl-tabs__tab">Archive</a>
+                    </div>
+
+
+                    <div class="mdl-tabs__panel is-active" id="composer">
+                        <input id="page-name" type="text" placeholder="Page title">
+                        <div class="canvas">
+                            <div class="wrapper">
+                            </div>
+                        </div>
+
+                        <div class="buttons main">
+                            <button class="clear mdl-button mdl-js-button mdl-button--raised">
+                                Clear page
+                            </button>
+                            <button class="clear-photos mdl-button mdl-js-button mdl-button--raised">
+                                Clear photos
+                            </button>
+                            <button class="save-page mdl-button mdl-js-button mdl-button--raised ">
+                                Save page
+                            </button>
+                            <button class="save-layout mdl-button mdl-js-button mdl-button--raised">
+                                Save layout
+                            </button>
+                            <button class="save-config mdl-button mdl-js-button mdl-button--raised">
+                                Save config
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="mdl-tabs__panel" id="archive">
+                        <div class="canvas">
+                            <div class="wrapper">
+                                <ul>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="buttons main">
+                            <button class="save-page mdl-button mdl-js-button mdl-button--raised ">
+                                Button1
+                            </button>
+                            <button class="clear mdl-button mdl-js-button mdl-button--raised">
+                                BUtton2
+                            </button>
+                            <button class="save-layout mdl-button mdl-js-button mdl-button--raised">
+                                Button3
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="mdl-tabs__panel" id="navigator">
+
+                        <div class="canvas">
+
+                            <div id="row1" class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--12-col">
+                                    <div id="photo-list">
+                                        <div class="wrapper">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="row2" class="mdl-grid">
+                                <div class="mdl-cell mdl-cell--4-col">
+                                    <div id="folders">
+                                        <ul class="open">
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mdl-cell mdl-cell--8-col">
+                                    <div id="preview"></div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+
+                        <div class="buttons main">
+                                    <button class="clear mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                        Clear
+                                    </button>
+                                    <button class="select mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                        Select
+                                    </button>
+                                    <button class="unselect mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">
+                                        Unselect
+                                    </button>
+
+                        </div>
+
+
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="mdl-cell mdl-cell--3-col">
+            <div class="mdl-card photos-card mdl-shadow--2dp dark">
+                <div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
+                    <div class="mdl-tabs__tab-bar">
+                        <a href="#photos" class="mdl-tabs__tab is-active">Photos</a>
+                        <a href="#layouts" class="mdl-tabs__tab">Layouts</a>
+                        <a href="#slots" class="mdl-tabs__tab">Slots</a>
+                    </div>
+                    <div class="mdl-tabs__panel is-active" id="photos">
+                        <div id="photo-list">
+                            <div class="wrapper">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mdl-tabs__panel" id="layouts">
+                        <div class="wrapper">
+                        </div>
+
+                    </div>
+                    <div class="mdl-tabs__panel" id="slots">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<dialog class="mdl-dialog" id="save-layout">
+    <h4 class="mdl-dialog__title">Save layout</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        Set the layout without photos
+      </p>
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+        <input class="mdl-textfield__input" type="text" id="layout-name">
+        <label class="mdl-textfield__label" for="sample1">Layout name</label>
+      </div>
+    </form>
+
+    </div>
+    <div class="mdl-dialog__actions">
+      <button type="button" class="mdl-button save">Save</button>
+      <button type="button" class="mdl-button close">Cancel</button>
+    </div>
+  </dialog>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jquery-mousewheel@3.1.13"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/lodash.min.js"></script>
+    <script src="js/hammer.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/jquery-hammerjs@2.0.0"></script>
+    <script src="js/imgViewer.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>
