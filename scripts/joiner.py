@@ -141,12 +141,13 @@ def process_photos(spec, filenames, target_folder):
 
 
 def summary(size, joined, created):
-    print
+    print()
     if not joined:
-        print 'No {} files to join'.format(size)
+        print('No {} files to join'.format(size))
     else:
-        print 'Joined {} photos into {}'.format(len(joined), len(created))
+        print('Joined {} photos into {}'.format(len(joined), len(created)))
     print
+
 
 if __name__ == '__main__':
     path_param = sys.argv[1]

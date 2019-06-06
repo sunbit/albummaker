@@ -22,6 +22,15 @@ function real_(measurement) {
     return parseInt(measurement / size_factor, 10)
 }
 
+function toggleTab(tab_href) {
+    $('#main-card .mdl-tabs__tab-bar a.is-active').toggleClass('is-active', false)
+    $('#main-card .mdl-tabs__tab-bar a[href~="#' + tab_href + '"]').toggleClass('is-active', true)
+
+    $('#main-card .mdl-tabs__panel.is-active').toggleClass('is-active', false)
+    $('#main-card .mdl-tabs__panel#' + tab_href).toggleClass('is-active', true)
+
+}
+
 function savePage() {
     var page = getComposerConfig()
 
@@ -201,7 +210,13 @@ function loadArchivePanel() {
     $('#archive').on('click', '.wrapper ul li', function(event) {
         var $page = $(event.currentTarget)
         var page = $page.data('page')
-        loadComposerPanel(page)
+
+        clearComposerPanel()
+        setTimeout(function() {
+            loadComposerPanel(page)
+            toggleTab('composer')
+        }, 100)
+
 
     })
 }
@@ -468,6 +483,10 @@ function loadPhotoFolder(folder, selected) {
     })
 }
 
+function clearComposerPanel() {
+        $('#composer .wrapper .photo-slot').remove()
+        $('input#page-name').val("")
+}
 
 function clearNavigatorPhotos(selector) {
     // Selector can be a text selector or a jquery object
@@ -734,8 +753,7 @@ $(document).ready(function () {
     })
 
     $("#composer button.clear").click(function() {
-        $('#composer .wrapper .photo-slot').remove()
-        $('input#page-name').val("")
+        clearComposerPanel()
     })
 
     $("#composer button.clear-photos").click(function() {

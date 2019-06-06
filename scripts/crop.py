@@ -4,7 +4,7 @@ import os
 import yaml
 import glob
 from PIL import Image
-import urllib
+from urllib.parse import unquote
 
 DPI = 254                           # Resolució de sortida en dots-per-inch
 JPEG_QUALITY = 100                  # Qualitat de les imatges retallades
@@ -56,13 +56,13 @@ if __name__ == '__main__':
     cropped_folder = os.path.join(data_folder, 'images', 'cropped')
 
     for page_filename in map(os.path.realpath, glob.glob('{}/*.yaml'.format(pages_folder))):
-        page = yaml.load(open(page_filename).read().decode('utf-8'))
+        page = yaml.load(open(page_filename).read())
         for photo in page['photos']:
             if 'src' not in photo:
-                print 'ERROR Processing page {} slot {}'.format(page['name'], photo['slot_id'])
+                print('ERROR Processing page {} slot {}'.format(page['name'], photo['slot_id']))
                 continue
 
-            photo_path = urllib.unquote(photo['src'].split('path=')[1])
+            photo_path = unquote(photo['src'].split('path=')[1])
 
             slot = get_slot(page, photo['slot_id'])
             slot_real_size = calc_slot_real_size(slot, scale=SCALE_FACTOR)
@@ -76,7 +76,7 @@ if __name__ == '__main__':
             new_filename = os.path.join(cropped_folder, new_filename)
 
             if not os.path.exists(new_filename):
-                print 'Processing ', new_filename
+                print('Processing ', new_filename)
                 original = Image.open(photo_path)
                 cropped = crop(original, photo['crop'])
                 resampled = resample(cropped, size=slot_real_size, dpi=DPI)

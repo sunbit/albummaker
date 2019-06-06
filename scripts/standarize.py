@@ -124,6 +124,6 @@ if __name__ == '__main__':
             sys.stdout.flush()
 
     # Mostrar el recompte final de imatges de cada mida
-    print
+    print()
     for size in SIZES:
-        print '[%dx%d] = %d' % (size[0], size[1], counters[size])
+        print('[%dx%d] = %d' % (size[0], size[1], counters[size]))

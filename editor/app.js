@@ -24,8 +24,8 @@ app.get('/', function (req, res) {
 
 
 const photoSources = [
-    "/Volumes/DATA/Fotografia/Albums",
-    "/Volumes/DATA/Fotografia/Panoràmiques",
+    "/Users/sunbit/Pictures/Fotografia/Albums",
+    "/Users/sunbit/Pictures/Fotografia/Panoràmiques",
     "/Users/sunbit/Dropbox"
 ]
 
